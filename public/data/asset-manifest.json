@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "retrievedAt": "2026-11-14",
+  "assets": [
+    {
+      "sourceId": "hirise-optical",
+      "path": "assets/jezero-orbital.jpg",
+      "url": "https://static.uahirise.org/images/wallpaper/1920/ESP_039348_1985.jpg",
+      "bytes": 4040694,
+      "sha256": "39f86ce2ac16e40c53b356c4025096111e0c9edb1f78161781f8ea506fb01ddc",
+      "transformation": "None; exact source bytes"
+    },
+    {
+      "sourceId": "crism-spectral",
+      "path": "assets/jezero-spectral.jpg",
+      "url": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA23239.jpg",
+      "bytes": 550154,
+      "sha256": "083eddb4f087ee30b6ad698dd1b05b0ee89672ebfaf77d777e99f4bb0f1e4bf0",
+      "transformation": "None; exact source bytes"
+    },
+    {
+      "sourceId": "mastcam-surface",
+      "path": "assets/jezero-surface.jpg",
+      "url": "https://assets.science.nasa.gov/content/dam/science/psd/mars/downloadable_items/4/5/45791_PIA24485_K4_ZCAM_main_sol004_Delta_Remnant_unannotated.jpg",
+      "bytes": 2264934,
+      "sha256": "f7e0dcb2683102aee9eb29716c14a638c4fe4ed505119906fbbb978d887fa232",
+      "transformation": "None; exact source bytes"
+    },
+    {
+      "sourceId": "ctx-topography",
+      "path": "assets/jezero-topography.jpg",
+      "url": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/media/images/M20_JezeroCrater_CTXDEM_mosaic_20m.jpg",
+      "bytes": 161815,
+      "sha256": "5bd8d4980cc4ab18513d63752e470ab0a4212c794c4be1806761667a26f3733f",
+      "transformation": "None; exact source bytes"
+    }
+  ],
+  "derived": [
+    {
+      "sourceId": "ctx-topography",
+      "path": "data/jezero-elevation.json",
+      "bytes": 62299,
+      "sha256": "18480f0d598233296dea7a1c5dc3fdc3749fa7d0a0b974489386ff52dc945be0",
+      "transformation": "96 x 80 nearest-neighbor samples from native 20 m USGS CTX DEM; extraction specified in scripts/extract-elevation.mjs"
+    },
+    {
+      "sourceId": "ctx-registered-optical",
+      "path": "assets/jezero-ctx-registered.png",
+      "bytes": 370604,
+      "sha256": "fc264e14de40d62fc0607df8e99080647212df7d005a2c5eba62fd3b6f3bb2c8",
+      "retrievedAt": "2026-11-15",
+      "transformation": "Nearest source pixel at each output pixel center in the common projected CRS; see scripts/extract-registered-ortho.mjs"
+    },
+    {
+      "sourceId": "ctx-registered-optical",
+      "path": "data/jezero-ctx-registered.json",
+      "bytes": 1971,
+      "sha256": "fb76df3d40035f1fc2f1adeef5654c62d39cfcb90634c3b971493a66e438a1eb",
+      "retrievedAt": "2026-11-15",
+      "transformation": "Nearest source pixel at each output pixel center in the common projected CRS; see scripts/extract-registered-ortho.mjs"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+.terrain-relief { overflow: hidden; border: 1px solid #ffffff17; border-radius: 14px; background: #171c1e; }
+.terrain-relief-heading { display: flex; align-items: start; justify-content: space-between; gap: 16px; padding: 18px 20px 0; }
+.terrain-relief-heading h3 { font-size: 15px; font-weight: 600; letter-spacing: -.02em; }
+.terrain-relief-heading p { margin-top: 5px; color: #a9b0ac; font-size: 11px; line-height: 1.5; }
+.terrain-relief-heading > span { font-family: var(--mono, monospace); font-size: 10px; color: #b9bcb5; white-space: nowrap; padding-top: 3px; }
+.terrain-relief canvas { display: block; width: 100%; height: 300px; margin-top: 12px; }
+.terrain-relief-controls { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; padding: 15px 20px 0; }
+.terrain-relief-controls label { display: block; min-width: 0; color: #bbc2bc; font-size: 11px; }
+.terrain-relief-controls label span { display: flex; justify-content: space-between; gap: 12px; }
+.terrain-relief-controls output { color: #f3bd91; font-family: var(--mono, monospace); }
+.terrain-relief-controls input { display: block; width: 100%; margin: 12px 0 6px; height: 4px; accent-color: #f18e55; cursor: pointer; }
+.terrain-relief-note { padding: 12px 20px 17px; color: #9da8a1; font-size: 10px; line-height: 1.6; }
+@media (max-width: 600px) { .terrain-relief-heading { display: block; } .terrain-relief-heading > span { display: block; margin-top: 8px; } .terrain-relief canvas { height: 260px; } .terrain-relief-controls { gap: 16px; } }

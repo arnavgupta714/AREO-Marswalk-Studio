@@ -1,0 +1,52 @@
+{
+  "name": "areo-marswalk-studio",
+  "version": "1.2.0",
+  "private": true,
+  "description": "AREO — Team CHITRA's offline Marswalk mission planning studio",
+  "author": "Team CHITRA",
+  "license": "MIT",
+  "type": "module",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "node --import tsx --test tests/*.test.mjs",
+    "desktop:dev": "node scripts/desktop-dev.mjs",
+    "desktop:run": "electron .",
+    "desktop:build": "tsc -b && vite build && electron-builder --win portable --x64 && node scripts/release-manifest.mjs",
+    "test:ui": "playwright test",
+    "test:desktop": "node scripts/smoke-desktop.mjs",
+    "test:portable": "node scripts/smoke-portable.mjs"
+  },
+  "dependencies": {
+    "lucide-react": "^0.468.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.0",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "electron": "^45.3.2",
+    "electron-builder": "^26.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "~5.9.3",
+    "vite": "^7.3.0"
+  },
+  "build": {
+    "appId": "org.teamchitra.areo",
+    "productName": "AREO Marswalk Studio",
+    "directories": {"output": "release"},
+    "files": ["dist/**/*", "electron/**/*", "build/icon.ico", "package.json"],
+    "asar": true,
+    "win": {
+      "icon": "build/icon.ico",
+      "target": [{"target": "portable", "arch": ["x64"]}],
+      "signAndEditExecutable": true,
+      "artifactName": "AREO-Marswalk-Studio-${version}-Windows-x64.${ext}"
+    }
+  }
+}
